@@ -1,0 +1,55 @@
+==22610== Memcheck, a memory error detector
+==22610== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22610== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==22610== Command: ./a.out
+==22610== 
+==22610== 
+==22610== HEAP SUMMARY:
+==22610==     in use at exit: 360,000 bytes in 6,000 blocks
+==22610==   total heap usage: 35,001 allocs, 29,001 frees, 1,560,704 bytes allocated
+==22610== 
+==22610== 24,000 bytes in 1,000 blocks are indirectly lost in loss record 1 of 6
+==22610==    at 0x4845013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10D07B: Input::Input() (input.cpp:23)
+==22610==    by 0x10D59A: Level::start() (level.cpp:51)
+==22610==    by 0x10A64C: main (main.cpp:15)
+==22610== 
+==22610== 24,000 bytes in 1,000 blocks are indirectly lost in loss record 2 of 6
+==22610==    at 0x4845013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10D0B4: Input::Input() (input.cpp:24)
+==22610==    by 0x10D59A: Level::start() (level.cpp:51)
+==22610==    by 0x10A64C: main (main.cpp:15)
+==22610== 
+==22610== 96,000 bytes in 1,000 blocks are indirectly lost in loss record 3 of 6
+==22610==    at 0x4845013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10CCC7: Player::Player(PlayerColor, float, float) (player.cpp:12)
+==22610==    by 0x10D0A3: Input::Input() (input.cpp:23)
+==22610==    by 0x10D59A: Level::start() (level.cpp:51)
+==22610==    by 0x10A64C: main (main.cpp:15)
+==22610== 
+==22610== 96,000 bytes in 1,000 blocks are indirectly lost in loss record 4 of 6
+==22610==    at 0x4845013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10CCC7: Player::Player(PlayerColor, float, float) (player.cpp:12)
+==22610==    by 0x10D0DC: Input::Input() (input.cpp:24)
+==22610==    by 0x10D59A: Level::start() (level.cpp:51)
+==22610==    by 0x10A64C: main (main.cpp:15)
+==22610== 
+==22610== 96,000 bytes in 1,000 blocks are definitely lost in loss record 5 of 6
+==22610==    at 0x4845013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10D4A8: Level::Level(int, LevelInfo*) (level.cpp:36)
+==22610==    by 0x10A63C: main (main.cpp:13)
+==22610== 
+==22610== 264,000 (24,000 direct, 240,000 indirect) bytes in 1,000 blocks are definitely lost in loss record 6 of 6
+==22610==    at 0x4845013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10D589: Level::start() (level.cpp:51)
+==22610==    by 0x10A64C: main (main.cpp:15)
+==22610== 
+==22610== LEAK SUMMARY:
+==22610==    definitely lost: 120,000 bytes in 2,000 blocks
+==22610==    indirectly lost: 240,000 bytes in 4,000 blocks
+==22610==      possibly lost: 0 bytes in 0 blocks
+==22610==    still reachable: 0 bytes in 0 blocks
+==22610==         suppressed: 0 bytes in 0 blocks
+==22610== 
+==22610== For lists of detected and suppressed errors, rerun with: -s
+==22610== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)

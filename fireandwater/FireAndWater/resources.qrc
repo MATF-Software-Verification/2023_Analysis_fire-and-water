@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>Images/transp.png</file>
+        <file>Images/transparent.png</file>
+        <file>Images/leveli.png</file>
+        <file>Images/setting_backround.jpeg</file>
+        <file>Images/underline.png</file>
+        <file>Images/bckgnd.jpeg</file>
+        <file>Images/tile1.png</file>
+        <file>Images/background_brick.jpg</file>
+        <file>Images/rtile.png</file>
+        <file>Images/red_door.png</file>
+        <file>Images/rd_puddle.png</file>
+        <file>Images/gr_puddle.png</file>
+        <file>Images/blue_door.png</file>
+        <file>Images/bl_puddle.png</file>
+        <file>Images/red_diamond.png</file>
+        <file>Images/blue_diamond.png</file>
+        <file>Images/locked_grey.png</file>
+        <file>Images/locked.png</file>
+        <file>Images/unlocked.png</file>
+        <file>Images/diamondBar.png</file>
+        <file>Images/help_img.jpeg</file>
+        <file>Images/fireboy.png</file>
+        <file>Images/watergirl.png</file>
+        <file>Images/life.png</file>
+    </qresource>
+    <qresource prefix="/mps"/>
+    <qresource prefix="/">
+        <file>Maps/map1.txt</file>
+        <file>Sound/backgroundMelody.wav</file>
+        <file>Maps/map3.txt</file>
+        <file>Maps/map2.txt</file>
+    </qresource>
+    <qresource prefix="/snd"/>
+</RCC>
