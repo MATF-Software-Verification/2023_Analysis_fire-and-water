@@ -1,6 +1,6 @@
 # 2023_Analysis_fire-and-water
 
-U ovom repozitorijumu biće predstavljen samostalni praktični seminarski rad u okviru kursa Verifikacija Softvera. Cilj projekta je je pronalazak grešaka, uskih grla programa i pisanje izveštaja korišćenjem raznih alata nad projektom otvorenog koda.
+U ovom repozitorijumu biće predstavljen samostalni praktični seminarski rad u okviru kursa Verifikacija Softvera. Cilj projekta je pronalazak grešaka, uskih grla programa i pisanje izveštaja korišćenjem raznih alata nad projektom otvorenog koda.
 
 ## Opis projekta
 
