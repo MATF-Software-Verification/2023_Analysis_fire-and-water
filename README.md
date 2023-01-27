@@ -7,7 +7,7 @@ Analizirani projekat se nalazi na adresi: https://gitlab.com/matf-bg-ac-rs/cours
 Primjena alata će biti izvršena na main grani, nad komitom čiji je hash code: d60da1e537620c22e79a23ad0c8573299d8befa7
 
 ## Spisak korišćenih alata:
--[Valgrind]
+- [Valgrind]
 -[Perf]
 -[Clang-Tidy i Clazy]
 -[Clangd]
