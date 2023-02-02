@@ -1,0 +1,247 @@
+In file included from /home/milica/Desktop/VS_projekat/08-fire-and-water/build-FireAndWater-Desktop_Qt_6_5_0_GCC_64bit-Debug/main.cpp:1:
+In file included from /home/milica/Desktop/VS_projekat/08-fire-and-water/FireAndWater/Headers/widget.h:4:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/QWidget:1:
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:101:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool modal READ isModal)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:102:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(Qt::WindowModality windowModality READ windowModality WRITE setWindowModality)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:103:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:104:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QRect geometry READ geometry WRITE setGeometry)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:105:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QRect frameGeometry READ frameGeometry)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:106:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QRect normalGeometry READ normalGeometry)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:107:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int x READ x)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:108:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int y READ y)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:109:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QPoint pos READ pos WRITE move DESIGNABLE false STORED false)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:110:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QSize frameSize READ frameSize)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:111:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QSize size READ size WRITE resize DESIGNABLE false STORED false)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:112:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int width READ width)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:113:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int height READ height)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:114:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QRect rect READ rect)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:115:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QRect childrenRect READ childrenRect)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:116:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QRegion childrenRegion READ childrenRegion)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:117:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QSizePolicy sizePolicy READ sizePolicy WRITE setSizePolicy)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:118:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QSize minimumSize READ minimumSize WRITE setMinimumSize)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:119:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QSize maximumSize READ maximumSize WRITE setMaximumSize)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:120:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int minimumWidth READ minimumWidth WRITE setMinimumWidth STORED false
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:122:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int minimumHeight READ minimumHeight WRITE setMinimumHeight STORED false
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:124:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int maximumWidth READ maximumWidth WRITE setMaximumWidth STORED false
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:126:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int maximumHeight READ maximumHeight WRITE setMaximumHeight STORED false
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:128:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QSize sizeIncrement READ sizeIncrement WRITE setSizeIncrement)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:129:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QSize baseSize READ baseSize WRITE setBaseSize)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:130:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QPalette palette READ palette WRITE setPalette)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:131:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QFont font READ font WRITE setFont)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:133:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QCursor cursor READ cursor WRITE setCursor RESET unsetCursor)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:135:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool mouseTracking READ hasMouseTracking WRITE setMouseTracking)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:136:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool tabletTracking READ hasTabletTracking WRITE setTabletTracking)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:137:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool isActiveWindow READ isActiveWindow)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:138:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(Qt::FocusPolicy focusPolicy READ focusPolicy WRITE setFocusPolicy)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:139:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool focus READ hasFocus)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:140:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(Qt::ContextMenuPolicy contextMenuPolicy READ contextMenuPolicy WRITE setContextMenuPolicy)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:141:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool updatesEnabled READ updatesEnabled WRITE setUpdatesEnabled DESIGNABLE false)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:142:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool visible READ isVisible WRITE setVisible DESIGNABLE false)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:143:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool minimized READ isMinimized)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:144:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool maximized READ isMaximized)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:145:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool fullScreen READ isFullScreen)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:146:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QSize sizeHint READ sizeHint)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:147:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QSize minimumSizeHint READ minimumSizeHint)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:148:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool acceptDrops READ acceptDrops WRITE setAcceptDrops)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:152:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(double windowOpacity READ windowOpacity WRITE setWindowOpacity)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:153:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool windowModified READ isWindowModified WRITE setWindowModified)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:155:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QString toolTip READ toolTip WRITE setToolTip)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:156:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int toolTipDuration READ toolTipDuration WRITE setToolTipDuration)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:159:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QString statusTip READ statusTip WRITE setStatusTip)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:162:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QString whatsThis READ whatsThis WRITE setWhatsThis)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:165:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QString accessibleName READ accessibleName WRITE setAccessibleName)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:166:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QString accessibleDescription READ accessibleDescription WRITE setAccessibleDescription)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:168:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(Qt::LayoutDirection layoutDirection READ layoutDirection WRITE setLayoutDirection RESET unsetLayoutDirection)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:170:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool autoFillBackground READ autoFillBackground WRITE setAutoFillBackground)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:172:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QString styleSheet READ styleSheet WRITE setStyleSheet)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:174:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QLocale locale READ locale WRITE setLocale RESET unsetLocale)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:175:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QString windowFilePath READ windowFilePath WRITE setWindowFilePath)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:176:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(Qt::InputMethodHints inputMethodHints READ inputMethodHints WRITE setInputMethodHints)
+    ^
+In file included from /home/milica/Desktop/VS_projekat/08-fire-and-water/build-FireAndWater-Desktop_Qt_6_5_0_GCC_64bit-Debug/main.cpp:3:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/QApplication:1:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:8:
+/home/milica/Qt/6.4.2/gcc_64/include/QtCore/qcoreapplication.h:53:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool quitLockEnabled READ isQuitLockEnabled WRITE setQuitLockEnabled)
+    ^
+In file included from /home/milica/Desktop/VS_projekat/08-fire-and-water/build-FireAndWater-Desktop_Qt_6_5_0_GCC_64bit-Debug/main.cpp:3:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/QApplication:1:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:13:
+/home/milica/Qt/6.4.2/gcc_64/include/QtGui/qguiapplication.h:39:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QIcon windowIcon READ windowIcon WRITE setWindowIcon)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtGui/qguiapplication.h:42:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QString desktopFileName READ desktopFileName WRITE setDesktopFileName)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtGui/qguiapplication.h:45:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QString platformName READ platformName STORED false)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtGui/qguiapplication.h:46:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool quitOnLastWindowClosed  READ quitOnLastWindowClosed
+    ^
+In file included from /home/milica/Desktop/VS_projekat/08-fire-and-water/build-FireAndWater-Desktop_Qt_6_5_0_GCC_64bit-Debug/main.cpp:3:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/QApplication:1:
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:34:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int cursorFlashTime READ cursorFlashTime WRITE setCursorFlashTime)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:35:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int doubleClickInterval  READ doubleClickInterval WRITE setDoubleClickInterval)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:36:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int keyboardInputInterval READ keyboardInputInterval WRITE setKeyboardInputInterval)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:38:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int wheelScrollLines  READ wheelScrollLines WRITE setWheelScrollLines)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:40:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int startDragTime  READ startDragTime WRITE setStartDragTime)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:41:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(int startDragDistance  READ startDragDistance WRITE setStartDragDistance)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:43:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(QString styleSheet READ styleSheet WRITE setStyleSheet)
+    ^
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:45:5: warning: Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify]
+    Q_PROPERTY(bool autoSipEnabled READ autoSipEnabled WRITE setAutoSipEnabled)
+    ^
+In file included from /home/milica/Desktop/VS_projekat/08-fire-and-water/build-FireAndWater-Desktop_Qt_6_5_0_GCC_64bit-Debug/main.cpp:1:
+In file included from /home/milica/Desktop/VS_projekat/08-fire-and-water/FireAndWater/Headers/widget.h:4:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/QWidget:1:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qwidget.h:9:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtCore/qobject.h:13:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtCore/qlist.h:10:
+/home/milica/Qt/6.4.2/gcc_64/include/QtCore/qhashfunctions.h:140:1: warning: Move qHash(std::nullptr_t) into std namespace for ADL lookup [-Wclazy-qhash-namespace]
+Q_DECL_CONST_FUNCTION constexpr inline size_t qHash(std::nullptr_t, size_t seed = 0) noexcept
+^
+/home/milica/Qt/6.4.2/gcc_64/include/QtCore/qcompilerdetection.h:188:33: note: expanded from macro 'Q_DECL_CONST_FUNCTION'
+#  define Q_DECL_CONST_FUNCTION __attribute__((const))
+                                ^
+In file included from /home/milica/Desktop/VS_projekat/08-fire-and-water/build-FireAndWater-Desktop_Qt_6_5_0_GCC_64bit-Debug/main.cpp:1:
+/home/milica/Desktop/VS_projekat/08-fire-and-water/FireAndWater/Headers/widget.h:28:8: warning: Slots named on_foo_bar are error prone [-Wclazy-connect-by-name]
+       void on_melodyBtn_stateChanged(int arg1);
+       ^
+In file included from /home/milica/Desktop/VS_projekat/08-fire-and-water/build-FireAndWater-Desktop_Qt_6_5_0_GCC_64bit-Debug/main.cpp:3:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/QApplication:1:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:13:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtGui/qguiapplication.h:10:
+/home/milica/Qt/6.4.2/gcc_64/include/QtGui/qinputmethod.h:72:5: warning: slot arguments need to be fully-qualified (QInputMethod::Action instead of Action) [-Wclazy-fully-qualified-moc-types]
+    void invokeAction(Action a, int cursorPosition);
+    ^
+In file included from /home/milica/Desktop/VS_projekat/08-fire-and-water/build-FireAndWater-Desktop_Qt_6_5_0_GCC_64bit-Debug/main.cpp:3:
+In file included from /home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/QApplication:1:
+/home/milica/Qt/6.4.2/gcc_64/include/QtWidgets/qapplication.h:133:5: warning: getter QApplication::autoSipEnabled possibly mismarked as a slot [-Wclazy-const-signal-or-slot]
+    bool autoSipEnabled() const;
+    ^
+73 warnings generated.
