@@ -1,0 +1,1420 @@
+diff -r FireAndWater/FireAndWater.pro.user ModifiedFireAndWater/FireAndWater.pro.user
+3c3
+< <!-- Written by QtCreator 9.0.1, 2023-02-02T18:03:27. -->
+---
+> <!-- Written by QtCreator 9.0.1, 2023-01-31T11:03:03. -->
+Only in FireAndWater: .gitignore
+diff -r FireAndWater/Headers/blueDiamond.h ModifiedFireAndWater/Headers/blueDiamond.h
+3a4,5
+> #include "Sources/modifiedProject.hpp"
+> 
+4a7,9
+> 
+> 
+> #ifndef MODIFIED_H
+21a27,49
+> 
+> 
+> 
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> class BlueDiamond :public Item
+> {
+>     public:
+>         BlueDiamond(double playerWidth, string imagePath);
+>         void collect(ItemColor id);
+>         double getWidth();
+>         double getHeight();
+>         ~BlueDiamond();
+> 
+>     private:
+>         double width;
+>         double height;
+> };
+> #endif
+diff -r FireAndWater/Headers/blueDoor.h ModifiedFireAndWater/Headers/blueDoor.h
+4a5,8
+> 
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+19a24,44
+> 
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> class BlueDoor : public Door
+> {
+>     public:
+>         BlueDoor(double playerWidth, string imagePath);
+>         bool blue = false;
+>         double getWidth();
+>         double getHeight();
+>         ~BlueDoor();
+> 
+>     private:
+>         double width;
+>         double height;
+> };
+> #endif
+diff -r FireAndWater/Headers/bluePuddle.h ModifiedFireAndWater/Headers/bluePuddle.h
+5a6,8
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+19a23,45
+> 
+> 
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> class BluePuddle : public Puddle
+> {
+>     public:
+>         BluePuddle(double playerWidth, string imagePath);
+>         double getWidth();
+>         double getHeight();
+>         ~BluePuddle();
+> 
+>     private:
+>         double width;
+>         double height;
+> 
+> 
+> };
+> #endif
+diff -r FireAndWater/Headers/door.h ModifiedFireAndWater/Headers/door.h
+3a4,6
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+6c9
+< class Door : QObject , public QGraphicsPixmapItem
+---
+> class Door : QObject , public  QGraphicsPixmapItem
+12a16,25
+> 
+> #else
+> class Door
+> {
+>     public:
+>         Door();
+>         ~Door();
+> };
+> #endif
+> 
+diff -r FireAndWater/Headers/greenPuddle.h ModifiedFireAndWater/Headers/greenPuddle.h
+4a5,8
+> 
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+18a23,42
+> 
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> class GreenPuddle : public Puddle
+> {
+>     public:
+>         GreenPuddle(double playerWidth, string imagePath);
+>         double getWidth();
+>         double getHeight();
+>         ~GreenPuddle();
+> 
+>     private:
+>         double width;
+>         double height;
+> };
+> #endif
+diff -r FireAndWater/Headers/input.h ModifiedFireAndWater/Headers/input.h
+5,6d4
+< #include <QGraphicsItem>
+< 
+7a6
+> #include "Sources/modifiedProject.hpp"
+8a8,9
+> #ifndef MODIFIED_H
+> #include <QGraphicsItem>
+43a45,73
+> 
+> 
+> #else
+> class Input
+> {
+>     public:
+> 
+>         Input();
+>         ~Input();
+>         void advance();
+>         Player *playerFire = nullptr;
+>         Player *playerWater = nullptr;
+> 
+>     private:
+>         bool leftFire;
+>         bool rightFire;
+>         bool leftWater;
+>         bool rightWater;
+>         bool jumped;
+> 
+>         void detectCollision();
+>         void detectCollisionWater();
+>         void jump();
+>         void walk();
+> 
+>         void advance(int phase);
+> 
+> };
+> #endif
+diff -r FireAndWater/Headers/item.h ModifiedFireAndWater/Headers/item.h
+3a4,6
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+19a23,38
+> 
+> #else
+> enum class ItemColor
+> {
+>     Fire = 0,
+>     Water = 1
+> };
+> 
+> class Item 
+> {
+>     public:
+>         Item();
+>         ~Item();
+>         virtual void collect(ItemColor id) = 0;
+> };
+> #endif
+diff -r FireAndWater/Headers/levelBar.h ModifiedFireAndWater/Headers/levelBar.h
+3a4,6
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+20a24,33
+> 
+> #else
+> class LevelBar 
+> {
+>     public:
+>         LevelBar();
+>         void updateInformation();
+>         ~LevelBar();
+> };
+> #endif
+diff -r FireAndWater/Headers/leveldata.h ModifiedFireAndWater/Headers/leveldata.h
+3a4,5
+> #include "Sources/modifiedProject.hpp"
+> 
+diff -r FireAndWater/Headers/level.h ModifiedFireAndWater/Headers/level.h
+9a10,13
+> 
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+50a55,81
+> 
+> #else
+> class Level
+> {
+>     public:
+>         Input *input = nullptr;
+>         Level(int levelId,LevelInfo *levelInfo);
+>         void start();
+>         void finishLevel(MessageText msgText);
+>         bool red;
+>         bool blue;
+>         playerInfo *info;
+>         virtual ~Level();
+>         void outOfTime();
+>         
+>     private:
+>         int levelId;
+>         Melody *music;
+>         LevelBar *levelBar;
+>         LevelInfo *levelInfo;
+>         void setView();
+>         void parseLevelMap();
+>         void putObjectOnScene(char type, double x, double y);
+> 
+> };
+> 
+> #endif
+diff -r FireAndWater/Headers/levelinfo.h ModifiedFireAndWater/Headers/levelinfo.h
+6d5
+< #include <QString>
+8a8,14
+> #include "Sources/modifiedProject.hpp"
+> 
+> using namespace std;
+> 
+> #ifndef MODIFIED_H
+> #include <QString>
+> 
+35a42,73
+> 
+> #else
+> #include <string>
+> 
+> class LevelInfo
+> {
+>     public:
+>         double screenWidth;
+>         double screenHeight;
+>         double sceneSizeX;
+>         double platformOffSet;
+>         double itemOffSet;
+>         LevelInfo(Settings *settings);
+>         string getDoor(int levelId);
+>         string getTile();
+>         string getRTile();
+>         string getPuddle(int levelId);
+>         string getDiamond(int levelId);
+>         string getLevelMap(int levelId);
+>         bool getMelody();
+>         ~LevelInfo();
+> 
+>     private:
+>         Settings *settings;
+>         std::vector<string> tiles;
+>         std::vector<string> doors;
+>         std::vector<string> rtiles;
+>         std::vector<string> puddles;
+>         std::vector<string> diamonds;
+>         std::vector<string> levelMaps;
+> };
+> #endif
+diff -r FireAndWater/Headers/melody.h ModifiedFireAndWater/Headers/melody.h
+4c4
+< #include <QtMultimedia/QSoundEffect>
+---
+> #include "Sources/modifiedProject.hpp"
+5a6,8
+> #ifndef MODIFIED_H
+> #include <QtMultimedia/QSoundEffect>
+> #endif
+9a13
+> #ifndef MODIFIED_H
+10a15
+> #endif
+diff -r FireAndWater/Headers/message.h ModifiedFireAndWater/Headers/message.h
+3a4,10
+> #include "Sources/modifiedProject.hpp"
+> 
+> #include <string>
+> 
+> using namespace std;
+> 
+> #ifndef MODIFIED_H
+4a12
+> #endif
+21d28
+<         QString getMessage(MessageText messageValue);
+23c30,35
+< 
+---
+> #ifndef MODIFIED_H
+>         QString getMessage(MessageText messageValue);
+> #else
+>         string getMessage(MessageText messageValue);
+> #endif
+> #ifndef MODIFIED_H
+26a39
+> #endif
+diff -r FireAndWater/Headers/player.h ModifiedFireAndWater/Headers/player.h
+4a5,8
+> 
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+6a11
+> #endif
+13a19
+> #ifndef MODIFIED_H
+41a48,77
+> 
+> 
+> #else
+> class Player
+> {
+>     public:
+> 
+>         Player(PlayerColor id, float x, float y);
+>         ~Player();
+> 
+>         double boundingRect();
+>         float GetX() const;
+>         float GetY() const;
+>         void SetX(float x);
+>         void SetY(float y);
+> 
+>         playerInfo *info;
+> 
+>         PlayerColor m_id;
+>         float m_x;// x koordinata polozaja
+>         float m_y; // y koordinata polozaja
+> 
+>         bool _isOnGround = true;
+>         bool _hitLeft=false;
+>         bool _hitRight=false;
+> 
+> 
+> 
+> };
+> #endif
+diff -r FireAndWater/Headers/playerinfo.h ModifiedFireAndWater/Headers/playerinfo.h
+3a4,6
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+7d9
+< 
+30a33,58
+> 
+> #else
+> class playerInfo
+> {
+>     public:
+>         playerInfo();
+>         double _height;
+>         double _width;
+>         double _stepY;
+>         double _stepX;
+>         double _screenHeight;
+>         double _gravity;
+>         double _posY;
+>         double _posX;
+>         double _moveX;
+>         double _moveY;
+>         double _velocityY=0;
+>         double _velocityX=0;
+> 
+>         void scaleParameters();
+>         void getScreenHeight();
+> 
+>         ~playerInfo();
+> 
+> };
+> #endif
+diff -r FireAndWater/Headers/puddle.h ModifiedFireAndWater/Headers/puddle.h
+3a4,6
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+12a16,26
+> 
+> 
+> #else
+> class Puddle 
+> {
+>     public:
+>         Puddle();
+>         ~Puddle();
+> };
+> #endif
+> 
+diff -r FireAndWater/Headers/redDiamond.h ModifiedFireAndWater/Headers/redDiamond.h
+5a6,8
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+21a25,45
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> class RedDiamond : public Item
+> {
+>     public:
+>         RedDiamond(double playerWidth, string imagePath);
+>         void collect(ItemColor id) override;
+>         double boundingRect();
+>         double getWidth();
+>         double getHeight();
+>         ~RedDiamond();
+> 
+>     private:
+>         double width;
+>         double height;
+> };
+> #endif
+diff -r FireAndWater/Headers/redDoor.h ModifiedFireAndWater/Headers/redDoor.h
+4a5,8
+> 
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+18a23,43
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> class RedDoor : public Door
+> {
+>     public:
+>         RedDoor(double playerWidth, string imagePath);
+>         double getWidth();
+>         double getHeight();
+>         bool red = false;
+>         ~RedDoor();
+> 
+> 
+>     private:
+>         double width;
+>         double height;
+> };
+> #endif
+diff -r FireAndWater/Headers/redPuddle.h ModifiedFireAndWater/Headers/redPuddle.h
+5a6,8
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+18a22,39
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> class RedPuddle : public Puddle
+> {
+>     public:
+>         RedPuddle(double playerWidth, string imagePath);
+>         double getWidth();
+>         double getHeight();
+>         ~RedPuddle();
+>     private:
+>         double width;
+>         double height;
+> };
+> #endif
+diff -r FireAndWater/Headers/reversetile.h ModifiedFireAndWater/Headers/reversetile.h
+3a4
+> #include "Sources/modifiedProject.hpp"
+4a6
+> #ifndef MODIFIED_H
+12a15,28
+> 
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> class ReverseTile 
+> {
+>     public:
+>         ReverseTile(double playerWidth, string imagePath);
+>         ~ReverseTile();
+> };
+> #endif
+diff -r FireAndWater/Headers/score.h ModifiedFireAndWater/Headers/score.h
+7a8,9
+> #include "Sources/modifiedProject.hpp"
+> 
+19a22
+> #ifndef MODIFIED_H
+21a25
+> #endif
+37a42
+> #ifndef MODIFIED_H
+39a45
+> #endif
+diff -r FireAndWater/Headers/settings.h ModifiedFireAndWater/Headers/settings.h
+3a4,5
+> #include "Sources/modifiedProject.hpp"
+> 
+diff -r FireAndWater/Headers/tile.h ModifiedFireAndWater/Headers/tile.h
+3a4,6
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+11a15,27
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> class Tile 
+> {
+>     public:
+>         Tile(double playerWidth, string imagePath);
+>         ~Tile();
+> };
+> #endif
+diff -r FireAndWater/Headers/widget.h ModifiedFireAndWater/Headers/widget.h
+3a4,6
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+37a41,42
+> #endif
+> 
+Only in FireAndWater: perf1.txt.ptq
+Only in FireAndWater: perf2.ptq
+diff -r FireAndWater/Sources/blueDiamond.cpp ModifiedFireAndWater/Sources/blueDiamond.cpp
+3a4
+> #ifndef MODIFIED_H
+43a45,84
+> 
+> 
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> extern Score *score;
+> 
+> BlueDiamond::BlueDiamond(double playerWidth, string imagePath)
+> {
+>     width = playerWidth * 0.9;
+>     height = width * 0.8;
+> }
+> 
+> void BlueDiamond::collect(ItemColor id)
+> {
+>     if(id == ItemColor::Water){
+>         score->increase();
+>         delete this;
+>     }
+> }
+> 
+> 
+> double BlueDiamond::getWidth()
+> {
+>     return this->width;
+> }
+> 
+> double BlueDiamond::getHeight()
+> {
+>     return this->height;
+> }
+> 
+> BlueDiamond::~BlueDiamond()
+> {
+> 
+> }
+> #endif
+diff -r FireAndWater/Sources/blueDoor.cpp ModifiedFireAndWater/Sources/blueDoor.cpp
+3a4
+> #ifndef MODIFIED_H
+29a31,63
+> 
+> 
+> 
+> #else
+> 
+> #include <string>
+> 
+> using namespace std;
+> 
+> extern Score *score;
+> 
+> BlueDoor::BlueDoor(double playerWidth, string imagePath)
+> {
+>     width = playerWidth * 1.0;
+>     height = width * 1.2;
+> }
+> 
+> double BlueDoor::getWidth()
+> {
+>     return this->width;
+> }
+> 
+> double BlueDoor::getHeight()
+> {
+>     return this->height;
+> }
+> 
+> BlueDoor::~BlueDoor()
+> {
+> 
+> }
+> 
+> #endif
+diff -r FireAndWater/Sources/bluePuddle.cpp ModifiedFireAndWater/Sources/bluePuddle.cpp
+4c4
+< 
+---
+> #ifndef MODIFIED_H
+28a29,60
+> 
+> 
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> extern Score *score;
+> 
+> BluePuddle::BluePuddle(double playerWidth, string imagePath)
+> {
+> 
+>     this->width = playerWidth * 2;
+>     this->height = playerWidth * 0.5;
+> }
+> 
+> double BluePuddle::getWidth()
+> {
+>     return this->width;
+> }
+> 
+> double BluePuddle::getHeight()
+> {
+>     return this->height;
+> }
+> 
+> BluePuddle::~BluePuddle()
+> {
+> 
+> }
+> #endif
+diff -r FireAndWater/Sources/greenPuddle.cpp ModifiedFireAndWater/Sources/greenPuddle.cpp
+3a4,5
+> 
+> #ifndef MODIFIED_H
+26a29,59
+> 
+> 
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> extern Score *score;
+> 
+> GreenPuddle::GreenPuddle(double playerWidth, string imagePath)
+> {
+> 
+>     width = playerWidth * 2;
+>     height = playerWidth * 0.5;
+> }
+> 
+> double GreenPuddle::getWidth()
+> {
+>     return this->width;
+> }
+> 
+> double GreenPuddle::getHeight()
+> {
+>     return this->height;
+> }
+> 
+> GreenPuddle::~GreenPuddle()
+> {
+> }
+> #endif
+diff -r FireAndWater/Sources/input.cpp ModifiedFireAndWater/Sources/input.cpp
+6a7
+> #ifndef MODIFIED_H
+7a9
+> #endif
+25a28
+> #ifndef MODIFIED_H
+27a31
+> #endif
+34a39
+> #ifndef MODIFIED_H
+92c97
+< 
+---
+> #endif
+103a109,110
+> void Input::advance() {}
+> 
+112a120
+> #ifndef MODIFIED_H
+113a122
+> #endif
+121a131
+> #ifndef MODIFIED_H
+122a133
+> #endif
+131a143
+> #ifndef MODIFIED_H
+132a145
+> #endif
+134a148
+> #ifndef MODIFIED_H
+135a150
+> #endif
+140c155
+< 
+---
+> #ifndef MODIFIED_H
+174c189
+< 
+---
+> #endif
+178c193
+< 
+---
+> #ifndef MODIFIED_H
+214c229
+< 
+---
+> #endif
+216a232
+> #ifndef MODIFIED_H
+332a349,350
+> 
+> #endif
+diff -r FireAndWater/Sources/levelBar.cpp ModifiedFireAndWater/Sources/levelBar.cpp
+5a6
+> #ifndef MODIFIED_H
+30a32,33
+> }
+> 
+31a35,41
+> #else
+> LevelBar::LevelBar()
+> {
+> }
+> 
+> void LevelBar::updateInformation()
+> {
+32a43
+> #endif
+diff -r FireAndWater/Sources/level.cpp ModifiedFireAndWater/Sources/level.cpp
+20a21
+> #ifndef MODIFIED_H
+24a26
+> #endif
+50c52
+< 
+---
+> #ifndef MODIFIED_H
+62c64
+< 
+---
+> #endif
+64a67
+> #ifndef MODIFIED_H
+67c70
+< 
+---
+> #endif
+70a74
+> #ifndef MODIFIED_H
+88c92,94
+< 
+---
+> #else
+>     input->advance();
+> #endif
+93c99
+< 
+---
+> #ifndef MODIFIED_H
+100a107
+> #endif
+110a118
+> #ifndef MODIFIED_H
+111a120
+> #endif
+113a123,124
+>     score->msg->setMessageText(msgText);
+> #ifndef MODIFIED_H
+116d126
+<     score->msg->setMessageText(msgText);
+118a129
+> #endif
+123a135
+> #ifndef MODIFIED_H
+148c160
+< 
+---
+> #endif
+150a163
+> #ifndef MODIFIED_H
+159a173
+> #ifndef MODIFIED_H
+161a176
+> #endif
+162a178
+> #ifndef MODIFIED_H
+164a181
+> #endif
+169a187
+> #ifndef MODIFIED_H
+171a190
+> #endif
+172a192
+> #ifndef MODIFIED_H
+174a195
+> #endif
+179a201
+> #ifndef MODIFIED_H
+181a204
+> #endif
+182a206
+> #ifndef MODIFIED_H
+184a209
+> #endif
+189a215
+> #ifndef MODIFIED_H
+191a218
+> #endif
+195a223
+> #ifndef MODIFIED_H
+197a226
+> #endif
+201a231
+> #ifndef MODIFIED_H
+203a234
+> #endif
+204a236
+> #ifndef MODIFIED_H
+206a239
+> #endif
+211a245
+> #ifndef MODIFIED_H
+213a248
+> #endif
+217a253
+> #ifndef MODIFIED_H
+219a256
+> #endif
+220a258
+> #ifndef MODIFIED_H
+222a261
+> #endif
+227a267
+> #ifndef MODIFIED_H
+229a270
+> #endif
+230a272
+> #ifndef MODIFIED_H
+232a275
+> #endif
+236a280
+> #ifndef MODIFIED_H
+238a283
+> #endif
+239a285
+> #ifndef MODIFIED_H
+241a288
+> #endif
+246a294
+> #ifndef MODIFIED_H
+248a297
+> #endif
+249a299
+> #ifndef MODIFIED_H
+251a302
+> #endif
+255a307
+> #ifndef MODIFIED_H
+257a310
+> #endif
+258a312
+> #ifndef MODIFIED_H
+260a315
+> #endif
+270c325,326
+< Level::~Level()
+---
+> #else
+> void Level::putObjectOnScene(char type, double x, double y)
+272a329,454
+>     switch(type){
+> 
+>     case '-':
+>         break;
+>     case 'G':{
+>         Tile *tile = new Tile(info->_width, levelInfo->getTile());
+>         //tile->setPos(x, y * custom);
+>         //scene->addItem(tile);
+>         GreenPuddle *puddle = new GreenPuddle(info->_width, levelInfo->getPuddle(0));
+>         //puddle->setPos(x, y * custom-5);
+>         //scene->addItem(puddle);
+> 
+>         break;
+>     }
+>     case 'M':{
+>         Tile *tile = new Tile(info->_width, levelInfo->getTile());
+>         //tile->setPos(x, y * custom);
+>         //scene->addItem(tile);
+>         BluePuddle *puddle = new BluePuddle(info->_width, levelInfo->getPuddle(1));
+>         //puddle->setPos(x, y * custom-5);
+>         //scene->addItem(puddle);
+>         break;
+>     }
+> 
+>     case 'N':{
+>         Tile *tile = new Tile(info->_width, levelInfo->getTile());
+>         //tile->setPos(x, y * custom);
+>         //scene->addItem(tile);
+>         RedPuddle *puddle = new RedPuddle(40, levelInfo->getPuddle(2));
+>         //puddle->setPos(x, y * custom-5);
+>         //scene->addItem(puddle);
+>         break;
+>     }
+> 
+>     case '_':{
+>         Tile *tile = new Tile(info->_width, levelInfo->getTile());
+>         //tile->setPos(x, y * custom);
+>         //scene->addItem(tile);
+>         break;
+>     }
+>     case '|':{
+>         ReverseTile *rtile = new ReverseTile(info->_width, levelInfo->getRTile());
+>         //rtile->setPos(x, y * custom - 100);
+>         //scene->addItem(rtile);
+>         break;
+>     }
+>     case '+':{
+>         ReverseTile *rtile = new ReverseTile(info->_width, levelInfo->getRTile());
+>         //rtile->setPos(x , y * custom - 100);
+>         //scene->addItem(rtile);
+>         Tile *tile = new Tile(info->_width, levelInfo->getTile());
+>         //tile->setPos(x, y * custom);
+>         //scene->addItem(tile);
+>         break;
+>     }
+> 
+>     case '!':{
+>         ReverseTile *rtile = new ReverseTile(info->_width, levelInfo->getRTile());
+>         //rtile->setPos(x + 60, y * custom - 100);
+>         //scene->addItem(rtile);
+>         break;
+>     }
+>     case '*':{
+>         ReverseTile *rtile = new ReverseTile(info->_width, levelInfo->getRTile());
+>         //rtile->setPos(x + 60, y * custom - 100);
+>         //scene->addItem(rtile);
+>         Tile *tile = new Tile(info->_width, levelInfo->getTile());
+>         //tile->setPos(x, y * custom);
+>         //scene->addItem(tile);
+>         break;
+>     }
+> 
+>     case 'R':{
+>         RedDiamond *diamond = new RedDiamond(info->_width, levelInfo->getDiamond(0));
+>         //diamond->setPos(x, y * height - 50);
+>         //scene->addItem(diamond);
+>         Tile *tile = new Tile(info->_width, levelInfo->getTile());
+>         //tile->setPos(x, y * custom );
+>         //scene->addItem(tile);
+>         break;
+>     }
+>     case 'B':{
+>         BlueDiamond *diamond = new BlueDiamond(info->_width, levelInfo->getDiamond(1));
+>         //diamond->setPos(x, y * height - 50);
+>         //scene->addItem(diamond);
+>         Tile *tile = new Tile(info->_width, levelInfo->getTile());
+>         //tile->setPos(x, y * custom );
+>         //scene->addItem(tile);
+>         break;
+>     }
+> 
+>     case 'W':{
+>         BlueDoor *door = new BlueDoor(info->_width, levelInfo->getDoor(1));
+>         //door->setPos(x, y * custom - info->_width);
+>         //scene->addItem(door);
+>         Tile *tile = new Tile(info->_width, levelInfo->getTile());
+>         //tile->setPos(x, y * custom );
+>         //scene->addItem(tile);
+>         break;
+>     }
+>     case 'F':{
+>         RedDoor *door = new RedDoor(info->_width, levelInfo->getDoor(0));
+>         //door->setPos(x, y * custom - info->_width);
+>         //scene->addItem(door);
+>         Tile *tile = new Tile(info->_width, levelInfo->getTile());
+>         //tile->setPos(x, y * custom );
+>         //scene->addItem(tile);
+>         break;
+>     }
+> 
+>     default:
+>         break;
+>     }
+> 
+> }
+> 
+> 
+> 
+> #endif
+> 
+> 
+> 
+> 
+> Level::~Level()
+> {
+> #ifndef MODIFIED_H
+280d461
+<     delete this->music;
+283d463
+<     delete this->levelBar;
+284a465,467
+> #endif
+>     delete this->music;
+>     delete this->levelBar;
+diff -r FireAndWater/Sources/levelinfo.cpp ModifiedFireAndWater/Sources/levelinfo.cpp
+2a3
+> #ifndef MODIFIED_H
+4a6,8
+> #endif
+> 
+> #include <string>
+41a46
+> #ifndef MODIFIED_H
+81a87,129
+> #else
+> string LevelInfo::getTile()
+> {
+>     return this->tiles[0];
+> }
+> 
+> string LevelInfo::getRTile()
+> {
+>     return this->rtiles[0];
+> }
+> 
+> string LevelInfo::getPuddle(int levelId)
+> {
+>     return this->puddles[levelId];
+> }
+> 
+> string LevelInfo::getDiamond(int colorId)
+> {
+>     if(colorId != 0 && colorId != 1)
+>         throw "Invalid id";
+>     return this->diamonds[colorId];
+> }
+> 
+> string LevelInfo::getDoor(int colorId)
+> {
+>     if(colorId != 0 && colorId != 1)
+>         throw "Invalid id";
+>     return this->doors[colorId];
+> }
+> 
+> bool LevelInfo::getMelody()
+> {
+>     return settings->getMelody();
+> }
+> 
+> string LevelInfo::getLevelMap(int levelId)
+> {
+>     if(levelId < 1 || levelId > 3)
+>         throw "Invalid id";
+>     return this->levelMaps[levelId-1];
+> }
+> 
+> #endif
+diff -r FireAndWater/Sources/main.cpp ModifiedFireAndWater/Sources/main.cpp
+1a2,4
+> #include "Headers/level.h"
+> #include "Headers/levelinfo.h"
+> #include "Headers/settings.h"
+2a6,8
+> #include "Sources/modifiedProject.hpp"
+> 
+> #ifndef MODIFIED_H
+3a10
+> #endif
+6a14
+> #ifndef MODIFIED_H
+10a19,35
+> #else
+>     int i = 0;
+>     int levelId = 1;
+>     while(i++ != 1) {
+>         levelId = levelId % 3;
+>         if(!levelId)
+>             levelId++;
+> 
+>         Settings *s = new Settings();
+>         LevelInfo *li = new LevelInfo(s);
+>         Level *level = new Level(levelId, li);
+> 
+>         level->start();
+> 
+>         delete s; delete li; delete level;
+>     }
+> #endif
+Only in ModifiedFireAndWater/Sources: makefile
+diff -r FireAndWater/Sources/melody.cpp ModifiedFireAndWater/Sources/melody.cpp
+1a2,3
+> 
+> #ifndef MODIFIED_H
+25a28,42
+> 
+> 
+> #else
+> Melody::Melody(bool isMelodyOn)
+> {
+> }
+> 
+> void Melody::stopMusic()
+> {
+> 
+> }
+> Melody::~Melody()
+> {
+> }
+> #endif
+diff -r FireAndWater/Sources/message.cpp ModifiedFireAndWater/Sources/message.cpp
+2a3,6
+> #include <string>
+> 
+> using namespace std;
+> 
+5c9
+< 
+---
+> #ifndef MODIFIED_H
+16c20
+< 
+---
+> #endif
+20a25
+> #ifndef MODIFIED_H
+22a28
+> #endif
+24a31
+> #ifndef MODIFIED_H
+36a44,56
+> #else
+> string Message::getMessage(MessageText messageValue)
+> {
+>     if(messageValue < MessageText::LostLife || messageValue > MessageText::OutOfTime)
+>         throw "Unknown message";
+> 
+>     return "";
+> }
+> 
+> Message::~Message()
+> {
+> }
+> #endif
+Only in ModifiedFireAndWater/Sources: modifiedProject.hpp
+diff -r FireAndWater/Sources/player.cpp ModifiedFireAndWater/Sources/player.cpp
+3c3
+< 
+---
+> #ifndef MODIFIED_H
+5a6
+> #endif
+10a12
+> #ifndef MODIFIED_H
+11a14
+> #endif
+14a18
+> #ifndef MODIFIED_H
+37a42
+> #endif
+diff -r FireAndWater/Sources/playerinfo.cpp ModifiedFireAndWater/Sources/playerinfo.cpp
+14a15
+> #ifndef MODIFIED_H
+16a18
+> #endif
+diff -r FireAndWater/Sources/redDiamond.cpp ModifiedFireAndWater/Sources/redDiamond.cpp
+4a5
+> #ifndef MODIFIED_H
+6a8
+> #endif
+9a12
+> #ifndef MODIFIED_H
+38a42,73
+> 
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> extern Score *score;
+> 
+> RedDiamond::RedDiamond(double playerWidth, string imagePath)
+> {
+>     width = playerWidth * 0.9;
+>     height = width * 0.8;
+> }
+> 
+> void RedDiamond::collect(ItemColor id)
+> {
+>     if(id == ItemColor::Fire){
+>         score->increase();
+>         delete this;
+>     }
+> }
+> 
+> double RedDiamond::getWidth()
+> {
+>     return this->width;
+> }
+> 
+> double RedDiamond::getHeight()
+> {
+>     return this->height;
+> }
+> #endif
+diff -r FireAndWater/Sources/redDoor.cpp ModifiedFireAndWater/Sources/redDoor.cpp
+3a4
+> #ifndef MODIFIED_H
+5a7
+> #endif
+8a11
+> #ifndef MODIFIED_H
+24a28,49
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> RedDoor::RedDoor(double playerWidth, string imagePath)
+> {
+>     width = playerWidth * 1.0;
+>     height = width * 1.2;
+> }
+> 
+> double RedDoor::getWidth()
+> {
+>     return this->width;
+> }
+> 
+> double RedDoor::getHeight()
+> {
+>     return this->height;
+> }
+> 
+> #endif
+diff -r FireAndWater/Sources/redPuddle.cpp ModifiedFireAndWater/Sources/redPuddle.cpp
+5a6
+> #ifndef MODIFIED_H
+22a24,46
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> RedPuddle::RedPuddle(double playerWidth, string imagePath)
+> {
+> 
+>     width = playerWidth * 2;
+>     height = playerWidth * 0.5;
+> }
+> 
+> double RedPuddle::getWidth()
+> {
+>     return this->width;
+> }
+> 
+> double RedPuddle::getHeight()
+> {
+>     return this->height;
+> }
+> #endif
+> 
+diff -r FireAndWater/Sources/reversetile.cpp ModifiedFireAndWater/Sources/reversetile.cpp
+2a3,4
+> 
+> #ifndef MODIFIED_H
+9a12,23
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> ReverseTile::ReverseTile(double playerWidth, string imagePath)
+> {
+> 
+>     double width = playerWidth * 0.5;
+>     double height = playerWidth * 3;
+> }
+> #endif
+diff -r FireAndWater/Sources/score.cpp ModifiedFireAndWater/Sources/score.cpp
+4a5,7
+> #include <iostream>
+> 
+> #ifndef MODIFIED_H
+6d8
+< #include<iostream>
+7a10
+> #endif
+23d25
+<     //std::cout << current_score << std::endl;
+25d26
+<     //std::cout <<"Skor:"<< current_score << std::endl;
+32d32
+< //    if(lives == 0)
+45a46
+> #ifndef MODIFIED_H
+83a85
+> #endif
+91a94
+> #ifndef MODIFIED_H
+93a97
+> #endif
+97a102
+> #ifndef MODIFIED_H
+98a104
+> #endif
+115a122
+> #ifndef MODIFIED_H
+132a140,141
+> #endif
+> 
+154a164
+> #ifndef MODIFIED_H
+155a166
+> #endif
+159a171
+> #ifndef MODIFIED_H
+160a173
+> #endif
+diff -r FireAndWater/Sources/tile.cpp ModifiedFireAndWater/Sources/tile.cpp
+2a3,4
+> 
+> #ifndef MODIFIED_H
+8a11,22
+> #else
+> #include <string>
+> 
+> using namespace std;
+> 
+> Tile::Tile(double playerWidth, string imagePath){
+> 
+>     double width = playerWidth * 2;
+>     double height = playerWidth * 0.5;
+> }
+> #endif
+> 
+diff -r FireAndWater/Sources/widget.cpp ModifiedFireAndWater/Sources/widget.cpp
+3c3
+< #include "ui_widget.h"
+---
+> //#include "ui_widget.h"
+6a7,8
+> 
+> #ifndef MODIFIED_H
+97,98d98
+<     //delete level->input;
+<     delete level->info;
+123a124
+> #endif
